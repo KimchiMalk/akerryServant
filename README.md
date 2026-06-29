@@ -9,7 +9,8 @@ This project is a starter Discord music bot. It does not ship with any real cred
    ```powershell
    python -m pip install -r requirements.txt
    ```
-3. Run the bot:
+3. Install FFmpeg and make sure it is available on your PATH, or set `FFMPEG_PATH` to the full path of your `ffmpeg.exe`.
+4. Run the bot:
    ```powershell
    python .\AkerrySlave.py
    ```
@@ -31,4 +32,5 @@ SPOTIFY_CLIENT_SECRET=your_spotify_client_secret_here
 
 - The bot reads secrets from environment variables and from `.env`.
 - Do not commit your real `.env` file or any generated cache/data files to GitHub.
+- FFmpeg is expected to be installed separately; the bot uses `FFMPEG_PATH` if set, otherwise it uses `ffmpeg` from your PATH.
 - If you plan to publish this repository, keep only the example template and your code.

@@ -30,10 +30,8 @@ else:
     print("To enable Spotify links, add credentials to your .env file.")
 
 
-# FFmpeg: prefer FFMPEG_PATH env var, else try bundled ./bin/ffmpeg/ffmpeg.exe, else assume `ffmpeg` is on PATH
-_here = os.path.dirname(__file__)
-_bundled_ffmpeg = os.path.join(_here, 'bin', 'ffmpeg', 'ffmpeg.exe')
-FFMPEG = os.getenv('FFMPEG_PATH') or (_bundled_ffmpeg if os.path.exists(_bundled_ffmpeg) else 'ffmpeg')
+# FFmpeg: prefer FFMPEG_PATH env var, otherwise assume `ffmpeg` is on PATH
+FFMPEG = os.getenv('FFMPEG_PATH') or 'ffmpeg'
 
 intents = discord.Intents.default()
 intents.message_content = True
