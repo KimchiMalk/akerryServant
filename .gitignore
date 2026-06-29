@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+.cache/
+__pycache__/
+*.py[cod]
+*.pyo
+user_data.json
+dc_env/
